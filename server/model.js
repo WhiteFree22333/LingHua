@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 
 const ordersSchema = new mongoose.Schema({
     //标题
-    title: { type: String },
+    name: { type: String },
 })
 
 //导出模型
-module.exports = mongoose.model('Category',ordersSchema);
+module.exports = mongoose.model('LingHua',ordersSchema);

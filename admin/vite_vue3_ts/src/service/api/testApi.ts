@@ -1,7 +1,7 @@
 import LhRequest from "../LhRequest";
 
 enum API {
-  testGet = "/categories", // 测试链接
+  testGet = "/linghua", // 测试链接
 }
 
 export const selectTest = async (param: any) => {
@@ -9,4 +9,4 @@ export const selectTest = async (param: any) => {
   const res = await LhRequest.post(API.testGet, param);
   console.log("返回结果", res);
   return res;
-}
+};

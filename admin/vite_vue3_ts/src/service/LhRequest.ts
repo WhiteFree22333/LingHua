@@ -17,8 +17,9 @@ interface ResultData<T = any> extends Result {
   data?: T;
 }
 const URL = "http://127.0.0.1:3000/admin/api";
+// const URL = "/admin/api";
 enum RequestEnums {
-  TIMEOUT = 20000,
+  TIMEOUT = 200000,
   OVERDUE = 600, // 登录失效
   FAIL = 999, // 请求失败
   SUCCESS = 200, // 请求成功
@@ -29,7 +30,7 @@ const config = {
   // 设置超时时间
   timeout: RequestEnums.TIMEOUT as number,
   // 跨域时候允许携带凭证
-  withCredentials: true,
+  //withCredentials: true,
 };
 
 class LhRequest {
@@ -50,6 +51,11 @@ class LhRequest {
         return {
           ...config,
           headers: {
+            //"Access-Control-Allow-Origin": "*",
+            //"Access-Control-Allow-Methods": "PUT,POST,GET,DELETE,OPTIONS",
+            // "Access-Control-Allow-Headers": "X-Requested-With",
+            // "X-Powered-By": "Express",
+            //"Content-Type": "application/json;charset=utf-8",
             "x-access-token": token, // 请求头中携带token信息
           },
         };

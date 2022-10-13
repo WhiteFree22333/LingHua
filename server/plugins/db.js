@@ -11,7 +11,7 @@ module.exports =app=>{
     //连接数据库
     mongoose.connect(dbUrl, {
         useNewUrlParser: true,
-        //useUnifiedTopology: true
+        useUnifiedTopology: true
     });
 
     //连接成功时
