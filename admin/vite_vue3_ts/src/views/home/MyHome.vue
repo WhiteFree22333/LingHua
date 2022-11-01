@@ -43,7 +43,7 @@
                 <span>肉肉列表</span>
               </el-menu-item>
               <!--              disabled-->
-              <el-menu-item index="4">
+              <el-menu-item index="/meatList">
                 <el-icon><setting /></el-icon>
                 <span>肉肉车</span>
               </el-menu-item>

@@ -8,4 +8,11 @@ export const meat: Array<RouteRecordRaw> = [
     component: () => import("../../views/meat/inDex.vue"),
     children: [],
   },
+  //已经购买的肉肉列表
+  {
+    path: "/meatList",
+    name: "meatList",
+    component: () => import("../../views/meat/meatList.vue"),
+    children: [],
+  },
 ];
