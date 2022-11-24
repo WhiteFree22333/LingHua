@@ -1,5 +1,9 @@
 <template>
-  <el-row :gutter="10" justify="start">
+  <el-row
+    :gutter="10"
+    justify="start"
+    style="height: 100vh; padding-bottom: 8rem"
+  >
     <!--      :offset="index > 0 ? 0 : 0"-->
     <el-col
       :span="24"
@@ -8,11 +12,13 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         align-content: flex-start;
+        height: 100%;
+        overflow-y: scroll;
       "
     >
       <el-card
-        v-for="o in meatShowList"
-        :key="o"
+        v-for="(o, index) in meatShowList"
+        :key="index"
         v-infinite-scroll="load"
         style="margin: 10px 10px 0 0"
         :body-style="{}"
@@ -37,6 +43,7 @@
           </div>
         </div>
       </el-card>
+      <div></div>
     </el-col>
   </el-row>
 </template>
@@ -91,9 +98,11 @@ const load = () => {
 .image {
   width: auto;
   height: auto;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 70%;
+  max-height: 70%;
   margin: auto;
   display: block;
+}
+.zhanwei {
 }
 </style>
